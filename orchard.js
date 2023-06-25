@@ -142,7 +142,7 @@ var copyFuji = fujiAcres.slice(0,7)  //using slice to creat new copies of the or
 var copyGala = galaAcres.slice(0,7)
 var copyPink = pinkAcres.slice(0,7)
 
-let fujiTons = []   //creating a new array for each apple to track the amount of tons were connect
+let fujiTons = []   //creating a new array for each apple to track the amount of tons 
 let galaTons = []
 let pinkTons = []
 
