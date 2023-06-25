@@ -51,9 +51,9 @@ const pinkPrice = .55
 
 // CODE HERE
 
-let totalAcres = 0
+let totalAcres = 0 //set new variable equal to zero
 for (let i=0; i < fujiAcres.length; i++){
-    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i] //for loop iterates over each of the arrays adding the value to the new variable to sum the total acres
 }
 console.log(totalAcres)
 // PROBLEM 2
@@ -70,7 +70,7 @@ console.log(totalAcres)
 
 // CODE HERE
 
-let averageDailyAcres = totalAcres/7
+let averageDailyAcres = totalAcres/7  //setting the new variable equal to the total acres divided by number of days to get average acres per day
 console.log(averageDailyAcres)
 
 
@@ -107,8 +107,8 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-while (acresLeft > 0){
-    acresLeft -= averageDailyAcres
+while (acresLeft > 0){      
+    acresLeft -= averageDailyAcres   //the while loop will continue to subtract the average daily acres from the acres left while also adding 1 to the days while the acres left is greater than 0
     days ++
 }
 console.log(days)
@@ -138,16 +138,16 @@ console.log(days)
 */
 
 // CODE HERE
-var copyFuji = fujiAcres.slice(0,7)
+var copyFuji = fujiAcres.slice(0,7)  //using slice to creat new copies of the original arrays
 var copyGala = galaAcres.slice(0,7)
 var copyPink = pinkAcres.slice(0,7)
 
-let fujiTons = []
+let fujiTons = []   //creating a new array for each apple to track the amount of tons were connect
 let galaTons = []
 let pinkTons = []
 
-for (let i=0; i<copyFuji.length; i++){
-    fujiTons.push(copyFuji[i] * 6.5)
+for (let i=0; i<copyFuji.length; i++){  //the for loop will iterate over each of the arrays and multiply the value inside the array by 6.5 and then push it into the new array to calculate the tons
+    fujiTons.push(copyFuji[i] * 6.5)    
     galaTons.push(copyGala[i] * 6.5)
     pinkTons.push(copyPink[i] * 6.5)
 }
@@ -173,12 +173,12 @@ console.log(pinkTons)
 
 // CODE HERE 
 
-let fujiPounds = 0
+let fujiPounds = 0  //setting the new variable equal to zero
 let galaPounds = 0
 let pinkPounds = 0
 
-for (let i=0; i<fujiTons.length; i++){
-    fujiPounds = fujiPounds + (fujiTons[i] * 2000);
+for (let i=0; i<fujiTons.length; i++){  
+    fujiPounds = fujiPounds + (fujiTons[i] * 2000); //the for loop goes through each of the arrays of tons and multiplys the values by 2000 to turn tons to lbs summing it then adding it to the new variable to get lbs for each array
     galaPounds = galaPounds + (galaTons[i] * 2000);
     pinkPounds = pinkPounds + (pinkTons[i] * 2000);
 }
@@ -207,7 +207,7 @@ console.log(pinkPounds)
 // CODE HERE
 
 let fujiProfit = fujiPounds * .89
-let galaProfit = galaPounds * .64
+let galaProfit = galaPounds * .64 //making a new variable and also setting it equal to the pounds calculated times the cost per pound to find the profits
 let pinkProfit = pinkPounds * .55
 
 console.log(fujiProfit)
@@ -225,5 +225,5 @@ console.log(pinkProfit)
 */
 
 // CODE HERE
-let totalProfit = fujiProfit + galaProfit + pinkProfit
+let totalProfit = fujiProfit + galaProfit + pinkProfit // making a new variable and summing all of the individual profits into a total
 console.log(totalProfit)
